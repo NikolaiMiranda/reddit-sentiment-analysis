@@ -1,4 +1,4 @@
-# Reddit Sentiment Analysis Dashboard
+# Reddit Sentiment Analysis
 
 This project performs sentiment analysis on Reddit posts and comments using Python and the VADER sentiment analysis tool. The output is then visualized through an interactive Tableau dashboard. The goal is to provide an intuitive way to explore public sentiment and engagement around any subreddit over a custom time period.
 
