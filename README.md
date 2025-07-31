@@ -6,20 +6,20 @@ This project performs sentiment analysis on Reddit posts and comments using Pyth
 
 With this tool, you can:
 
-- Scrape all **posts** and **comments** from a specified subreddit within a user-defined date range  
-- Perform sentiment analysis using the **VADER lexicon**  
-- Classify each piece of content as **Positive**, **Neutral**, or **Negative**  
-- Export results to a clean **CSV file**  
-- Explore key sentiment and engagement trends in a **Tableau dashboard**  
+- Scrape all **posts** and **comments** from a specified subreddit within a user-defined date range.
+- Perform sentiment analysis using the **VADER lexicon**.  
+- Classify each piece of content as **Positive**, **Neutral**, or **Negative**.  
+- Export results to a clean **CSV file**.  
+- Explore key sentiment and engagement trends in a **BI tool of your choosing** (I used Tableau).  
 
 ## Tech Stack
 
-- Python (data scraping, cleaning, and sentiment analysis)  
-- `asyncpraw` (asynchronous Reddit API access)  
-- `VADER` via NLTK (for sentiment scoring)  
-- `pandas` (data manipulation)  
-- Google Colab (notebook environment)  
-- Tableau (data visualization)  
+- Python (data scraping, cleaning, and sentiment analysis).  
+- `asyncpraw` (asynchronous Reddit API access).  
+- `VADER` via NLTK (for sentiment scoring).  
+- `pandas` (data manipulation).  
+- Google Colab (notebook environment).  
+- Tableau (data visualization).  
 
 ## Features
 
@@ -27,7 +27,7 @@ With this tool, you can:
 
 Users are prompted to input:
 - A subreddit name (e.g., `biltrewards`)
-- A start and end date (e.g., `07-20-2025` to `07-30-2025`)
+- A start and end date (e.g., `07-01-2025` to `07-31-2025`)
 
 ### Data Collected
 
@@ -62,9 +62,12 @@ The processed data is exported to a `.csv` file containing all metadata and sent
 
 ### Tableau Dashboard
 
-The exported CSV is used to power a Tableau dashboard featuring:
+I used the exported CSV to power a [Tableau dashboard](https://public.tableau.com/app/profile/nikolai.miranda/viz/reddit-sentiment-analysis/Dashboard1) featuring:
 
-- Filters for sentiment, date range, and content type  
-- Word clouds of common terms by sentiment  
-- Time series views of engagement and sentiment trends  
-- Drill-down into individual posts and comments  
+- Keyword and date range filtering.
+- Overall sentiment distribution.
+- Time series views of engagement and sentiment trends.  
+- Drill-downs into individual posts and comments.
+
+![Dashboard Screenshot](images/dashboard.png)
+
