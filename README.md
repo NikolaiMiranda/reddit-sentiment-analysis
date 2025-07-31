@@ -69,5 +69,5 @@ I used the exported CSV to power a [Tableau dashboard](https://public.tableau.co
 - Time series views of engagement and sentiment trends.  
 - Drill-downs into individual posts and comments.
 
-![Dashboard Screenshot](images/dashboard.png)
+![Dashboard Screenshot](dashboard.png)
 
