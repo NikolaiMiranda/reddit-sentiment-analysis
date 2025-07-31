@@ -2,6 +2,15 @@
 
 This project performs sentiment analysis on Reddit posts and comments using Python and the VADER sentiment analysis tool. The output is then visualized through an interactive Tableau dashboard. The goal is to provide an intuitive way to explore public sentiment and engagement around any subreddit over a custom time period.
 
+## Table of Contents
+
+- [Project Overview](#project-overview)
+- [Tech Stack](#tech-stack)
+- [Features](#features)
+- [Running the Colab Notebook](#running-the-colab-notebook)
+- [Limitations](#limitations)
+- [Future Improvements](#future-improvements)
+
 ## Project Overview
 
 With this tool, you can:
@@ -69,5 +78,35 @@ I used the exported CSV to power a [Tableau dashboard](https://public.tableau.co
 - Time series views of engagement and sentiment trends.  
 - Drill-downs into individual posts and comments.
 
+Note: When importing the CSV into Tableau, ensure the text qualifier is set to quotation marks (") in the data source connection settings to properly handle fields containing commas or special characters.
+
 ![Dashboard Screenshot](tableau.png)
 
+## Running the Colab Notebook
+
+To run the project in Google Colab:
+
+1. Open the reddit_sentiment_analysis.ipynb notebook in Google Colab.
+2. Install required dependencies.
+3. Set up Reddit API credentials:
+   - Create a Reddit app at https://www.reddit.com/prefs/apps.
+   - Add your client_id, client_secret, and user_agent to the notebook.
+4. Run all cells sequentially.
+5. When prompted, enter:
+   - Subreddit name (e.g., biltrewards)
+   - Start date (e.g., 07-01-2025)
+   - End date (e.g., 07-31-2025)
+6. The notebook will scrape data, perform sentiment analysis, and export a CSV which you can find in the files tab of the notebook in Google Colab.
+
+## Limitations
+
+- Limited to public subreddits accessible via the Reddit API.
+- VADER may misinterpret sarcasm, slang, or context-specific sentiment.
+- Reddit API rate limits may slow down scraping for large subreddits or extended time periods. The rate limits may also cut you off before you scrape the entire collection of posts in your designated date range.
+- The tool processes only text-based content, ignoring images or videos.
+
+## Future Improvements
+
+- Automated Live Data Ingestion: Implement scheduled scraping to continuously pull new Reddit data and directly load it into a relational database (e.g., PostgreSQL or MySQL) instead of static CSVs.
+- Real-time Tableau Connection: Configure the Tableau dashboard to connect directly to the database via a live connection, ensuring the dashboard updates automatically with the latest sentiment data.
+- Explore integrating more sophisticated NLP models to enhance sentiment analysis accuracy.
