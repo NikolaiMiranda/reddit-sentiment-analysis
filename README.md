@@ -86,7 +86,7 @@ Note: When importing the CSV into Tableau, ensure the text qualifier is set to q
 
 To run the project in Google Colab:
 
-1. Open the reddit_sentiment_analysis.ipynb notebook in Google Colab.
+1. Open the [Sentiment_Analysis.ipynb](https://github.com/NikolaiMiranda/reddit-sentiment-analysis/blob/main/Sentiment_Analysis.ipynb) notebook in Google Colab.
 2. Install required dependencies.
 3. Set up Reddit API credentials:
    - Create a Reddit app at https://www.reddit.com/prefs/apps.
